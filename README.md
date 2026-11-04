@@ -74,6 +74,17 @@ Or, with the pip environment activated: `python -m pytest`, `ruff check .`, and 
 
 Tests use temporary SQLite databases, block socket connections, and require no external credentials. They cover persistence across restart, concurrency, safe retries, rollback, authentication, input validation, no-match retrieval, and failure recovery. CI runs the Python suite and Docker checks on pushes and pull requests.
 
+## Run the automated walkthrough
+
+```bash
+uv run --frozen python scripts/demo_workflow.py
+```
+
+This starts a temporary local server, performs real HTTP requests, and checks course retrieval,
+no-match behavior, a committed lead, safe retries, a failed write, and recovery. It uses a fresh
+temporary database and no provider credentials. The database is removed afterward; a report is
+saved to `.local/demo-report.json`. This is a workflow simulation, not a real audio session.
+
 ## Break persistence on purpose
 
 1. Stop the server.

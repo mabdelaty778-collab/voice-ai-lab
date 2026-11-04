@@ -1,0 +1,52 @@
+{
+  "academy": "Example Learning Academy (fictional)",
+  "courses": [
+    {
+      "id": "python-automation",
+      "name": "Python Automation",
+      "duration": "4 weeks",
+      "price": "USD 120 (fictional)",
+      "prerequisites": "Basic Python syntax",
+      "keywords": ["python", "automation", "scripts", "بايثون", "أتمتة"],
+      "summary": "Practice file processing, HTTP clients, and scheduled tasks using synthetic data."
+    },
+    {
+      "id": "ai-foundations",
+      "name": "AI Foundations",
+      "duration": "6 weeks",
+      "price": "USD 180 (fictional)",
+      "prerequisites": "Basic Python and algebra",
+      "keywords": ["ai", "foundations", "machine", "learning", "ذكاء", "اصطناعي"],
+      "summary": "Learn train/test splits, evaluation, and simple model serving."
+    },
+    {
+      "id": "voice-agents",
+      "name": "Voice Agent Engineering",
+      "duration": "3 weeks",
+      "price": "USD 150 (fictional)",
+      "prerequisites": "Python functions and async/await",
+      "keywords": ["voice", "agents", "livekit", "speech", "صوت", "صوتي"],
+      "summary": "Build grounded tools, persist test leads, and handle provider failures."
+    }
+  ],
+  "faqs": [
+    {
+      "id": "delivery",
+      "question": "Where and how are classes delivered?",
+      "keywords": ["where", "location", "online", "classes", "delivery", "مكان", "أونلاين"],
+      "answer": "This fictional academy runs online practice sessions. There is no real campus or booking service."
+    },
+    {
+      "id": "payments",
+      "question": "Can I pay in installments?",
+      "keywords": ["pay", "payment", "installments", "دفع", "أقساط"],
+      "answer": "All prices are sample data. The lab does not accept payments or promise installment plans."
+    },
+    {
+      "id": "certificates",
+      "question": "Are the courses accredited?",
+      "keywords": ["accredited", "accreditation", "certificate", "certification", "معتمد", "شهادة"],
+      "answer": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered."
+    }
+  ]
+}

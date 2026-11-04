@@ -1,0 +1,36 @@
+services:
+  lab:
+    build:
+      context: .
+      target: app
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      LAB_API_KEY: ${LAB_API_KEY:?Run python scripts/setup_lab.py first}
+      LAB_DB_PATH: /app/.local/lab.sqlite3
+      LAB_FAIL_WRITES: ${LAB_FAIL_WRITES:-false}
+    volumes:
+      - lab-data:/app/.local
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  tests:
+    profiles: [test]
+    build:
+      context: .
+      target: tests
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+volumes:
+  lab-data:

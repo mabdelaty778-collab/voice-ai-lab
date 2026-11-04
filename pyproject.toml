@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-ai-lab"
+version = "0.1.0"
+description = "Learn voice-agent tools, grounding, persistence, and failure handling in a local lab."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+authors = [{name = "Mohamed Abdelaty"}]
+dependencies = [
+  "fastapi==0.133.1",
+  "uvicorn[standard]==0.41.0",
+  "python-dotenv==1.2.1",
+]
+
+[project.optional-dependencies]
+dev = ["httpx==0.28.1", "pytest==9.0.2", "ruff==0.17.3"]
+voice = ["livekit-agents[openai]~=1.8.0"]
+
+[tool.setuptools.packages.find]
+include = ["voice_ai_lab*"]
+
+[tool.setuptools.package-data]
+voice_ai_lab = ["data/*.json", "static/*.html", "static/*.css", "static/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

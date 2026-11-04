@@ -4,6 +4,14 @@
 
 Created by **Mohamed Abdelaty**. MIT licensed. Python + FastAPI + SQLite, with an optional LiveKit / OpenAI Realtime voice exercise.
 
+## Watch the voice agent
+
+[![Watch the redacted voice receptionist demo](docs/voice-demo-preview.jpg)](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4)
+
+**[Watch the 1 minute 46 second demo](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4)** · [Demo notes](docs/demo.md) · [Engineering case study](docs/engineering-case-study.md) · [Validation record](docs/validation.md)
+
+The recording shows my clinic voice receptionist answering questions in a browser conversation. Clinic branding, location details, and their spoken mentions are redacted. It is a demonstration of the original application; the open-source lab below is a separate teaching implementation with fictional data.
+
 Start with a **free local simulation**: ask about fictional courses, inspect the retrieved sources, capture a test lead, retry safely, and deliberately fail a database write. No provider key, cloud database, phone number, or GPU is needed for this mode. After dependencies are installed, it runs without internet access.
 
 This is a separate educational implementation inspired by my academy voice-agent work. It contains a new fictional catalog, new lab code, and a fresh git history. It does not contain EBH's knowledge documents, prompts, customer records, deployment settings, or production credentials.

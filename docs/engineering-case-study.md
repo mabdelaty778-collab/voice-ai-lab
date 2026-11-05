@@ -4,6 +4,8 @@
 
 [Watch the redacted demo](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4) · [Run the learning lab](../README.md#start-locally)
 
+For the academy application's architecture, provider tradeoffs, and documented Arabic audio-framing incident, read the [production case study](production-case-study.md). This page describes the separate learning lab.
+
 ## Problem and ownership
 
 I built two voice AI agents for clinic and academy use cases, with dashboards and connections to databases, CRM systems, and GSM/SIP infrastructure. The engineering challenge was connecting a natural conversation to business operations while keeping failures and persistence visible.

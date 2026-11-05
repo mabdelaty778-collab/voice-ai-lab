@@ -8,7 +8,7 @@ Created by **Mohamed Abdelaty**. MIT licensed. Python + FastAPI + SQLite, with a
 
 [![Watch the redacted voice receptionist demo](docs/voice-demo-preview.jpg)](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4)
 
-**[Watch the 1 minute 46 second demo](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4)** · [Demo notes](docs/demo.md) · [Engineering case study](docs/engineering-case-study.md) · [Validation record](docs/validation.md)
+**[Watch the 1 minute 46 second demo](https://github.com/mabdelaty778-collab/voice-ai-lab/blob/main/docs/clinic-voice-demo-redacted.mp4)** · [Production case study](docs/production-case-study.md) · [Demo notes](docs/demo.md) · [Lab engineering decisions](docs/engineering-case-study.md) · [Validation record](docs/validation.md)
 
 The recording shows my clinic voice receptionist answering questions in a browser conversation. Clinic branding, location details, and their spoken mentions are redacted. It is a demonstration of the original application; the open-source lab below is a separate teaching implementation with fictional data.
 

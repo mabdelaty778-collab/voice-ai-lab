@@ -19,3 +19,9 @@ Checked on **4 November 2026**, using Python 3.12.14 and uv 0.13.5.
 The fresh free environment emits a Starlette warning that its `httpx` compatibility path is deprecated. Its HTTP tests pass. No production database, provider key, telephony gateway, or customer record was used. [Verified CI run](https://github.com/mabdelaty778-collab/voice-ai-lab/actions/runs/41878560510). The new walkthrough was also executed locally; its CI execution can be checked on subsequent commits.
 
 This record describes a source snapshot. Re-run the checks after changing code, dependencies, or the knowledge file. Do not treat the local retrieval timer as an audio-latency benchmark.
+
+## Measurement update — 5 November 2026
+
+The full local suite with the locked optional SDK passes **49 tests** with socket connections blocked. Ruff lint and formatting pass. Tests cover missing values, percentile tails, interrupted replies, environment separation, duplicate IDs, partial cost coverage, strict outcome flags, private-field rejection, final SDK metric extraction, and failed save receipts. No new dependency was added.
+
+The local benchmark completed 300 sequential requests, 32 concurrent retries of one request, an injected write failure, and restart/recovery checks. Its latency figures measure in-process ASGI/SQLite only; [method and aggregate receipt](measurements.md). Live provider audio timing, actual total cost, and CRM conversion results remain unmeasured.

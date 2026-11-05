@@ -16,5 +16,6 @@ USER root
 COPY requirements-dev.lock ./
 RUN pip install --no-cache-dir --require-hashes -r requirements-dev.lock
 COPY tests ./tests
+COPY scripts ./scripts
 USER lab
 CMD ["python", "-m", "pytest", "-q", "-p", "no:cacheprovider"]

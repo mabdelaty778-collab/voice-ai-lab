@@ -34,6 +34,11 @@ Console mode uses local microphone/speakers rather than LiveKit media transport.
 
 ## What has and has not been tested
 
+For local, content-free measurements, optionally set
+`LAB_MEASUREMENTS_DIR=.local/session-measurements` before starting the console. A private JSON
+receipt is written at job shutdown using final SDK message metrics and cumulative usage.
+See [measurement definitions, reconciliation, and evidence limits](measurements.md).
+
 The free API, schema, persistence, and retry behavior can be tested without credentials. Optional SDK import and tool calls can also be smoke-tested without starting a model session. Successful import does not prove provider access, microphone behavior, latency, or model compliance. Run the scenario table with your own isolated key to validate those properties.
 
 Official references, checked when preparing this starter:

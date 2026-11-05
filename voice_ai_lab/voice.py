@@ -1,18 +1,22 @@
 """Optional paid voice console. No telephony or CRM integration is included."""
 
 import asyncio
+import logging
 import os
+import time
+from pathlib import Path
 from uuid import uuid4
 
 from pydantic import ValidationError
 
 from voice_ai_lab.config import Settings
+from voice_ai_lab.evidence import SessionRecorder, write_session
 from voice_ai_lab.knowledge import search
 from voice_ai_lab.models import LeadInput
 from voice_ai_lab.store import PersistenceUnavailable, RequestConflict, Store
 
 
-def build_agent(store: Store):
+def build_agent(store: Store, recorder: SessionRecorder | None = None):
     # Lazy imports keep the free simulation independent of audio SDKs.
     from livekit.agents import Agent, function_tool
 
@@ -48,6 +52,8 @@ def build_agent(store: Store):
             self, name: str, email: str, course_id: str, consent: bool
         ) -> dict:
             """Persist synthetic course interest after the caller explicitly agrees."""
+            started = time.perf_counter()
+            persisted = False
             key = (name.strip(), email.strip().lower(), course_id)
             request_id = self._request_ids.setdefault(key, str(uuid4()))
             try:
@@ -59,6 +65,7 @@ def build_agent(store: Store):
                     request_id=request_id,
                 )
                 row, created = await asyncio.to_thread(store.capture, lead)
+                persisted = True
                 return {"persisted": True, "id": row["id"], "replayed": not created}
             except ValidationError:
                 return {
@@ -67,6 +74,9 @@ def build_agent(store: Store):
                 }
             except (PersistenceUnavailable, RequestConflict):
                 return {"persisted": False, "error": "Nothing confirmed. Please retry."}
+            finally:
+                if recorder is not None:
+                    recorder.tool("save_test_lead", started, persisted)
 
     return LearningAdvisor()
 
@@ -93,7 +103,33 @@ def main():
                 voice=os.getenv("LAB_VOICE", "marin"),
             )
         )
-        await session.start(room=ctx.room, agent=build_agent(store))
+        recorder = None
+        measurements_dir = os.getenv("LAB_MEASUREMENTS_DIR", "").strip()
+        if measurements_dir:
+            recorder = SessionRecorder()
+
+            @session.on("error")
+            def on_error(event):
+                recorder.provider_error_events += 1
+
+            @session.on("close")
+            def on_close(event):
+                recorder.terminal_error = event.error is not None
+
+            async def save_measurements():
+                # The SDK has closed the session before shutdown callbacks run.
+                # Read final metrics once, then write off the audio event loop.
+                try:
+                    record = recorder.snapshot(session, environment="lab", route="realtime")
+                    await asyncio.to_thread(write_session, Path(measurements_dir), record)
+                except (OSError, ValueError, AttributeError):
+                    logging.getLogger(__name__).error(
+                        "Session measurement export failed; no measurement receipt confirmed."
+                    )
+
+            ctx.add_shutdown_callback(save_measurements)
+
+        await session.start(room=ctx.room, agent=build_agent(store, recorder))
         await session.generate_reply(
             instructions="Introduce yourself as an AI in a fictional lab "
             "and ask what course to explore."

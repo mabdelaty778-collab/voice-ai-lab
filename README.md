@@ -93,6 +93,23 @@ no-match behavior, a committed lead, safe retries, a failed write, and recovery.
 temporary database and no provider credentials. The database is removed afterward; a report is
 saved to `.local/demo-report.json`. This is a workflow simulation, not a real audio session.
 
+## Measure rather than guess
+
+```bash
+uv run --frozen --extra dev python scripts/benchmark_local.py --samples 100 --workers 8
+```
+
+The benchmark measures the local in-process API and SQLite, checks concurrent retries,
+injects a failed write, and verifies recovery after restarting the app. It makes no provider
+calls. [Recorded results and the production measurement guide](docs/measurements.md) explain
+the scope, sample counts, and latency method.
+
+Optional real voice can export content-free session measurements when
+`LAB_MEASUREMENTS_DIR=.local/session-measurements` is set. The offline analyzer reports SDK
+response latency, confirmed save-tool results, and optional reconciled CRM outcomes and actual
+costs. Missing values remain unknown. It does not collect audio, transcripts, or contacts.
+This recorder is tested against the lab's locked SDK; it has not been deployed to the academy.
+
 ## Break persistence on purpose
 
 1. Stop the server.

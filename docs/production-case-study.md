@@ -73,6 +73,12 @@ The production snapshot and the lab have different guarantees. I would validate 
 
 I have not published a defensible production benchmark for call volume, concurrent sessions, uptime, voice latency, cost per conversation, or conversion uplift. Those claims need operational records and a stated measurement method. I keep the published results limited to what the artifacts establish.
 
+## Measurement tools now available
+
+I added an opt-in, content-free session recorder, an offline outcome/cost reconciler, and a reproducible local benchmark. In the separate learning lab, **300 sequential API requests** returned their expected results; **32 concurrent retries** with eight worker threads produced one committed record. Injected write failure, restart durability, and recovery checks passed. These are local ASGI/SQLite measurements, not voice latency or production call results.
+
+[Measurement method, recorded latency percentiles, and production collection plan](measurements.md) · [Aggregate benchmark receipt](local-benchmark.json)
+
 ## Next production validation
 
 I would first trace each enrollment from tool invocation to a committed primary record and, separately, to its dashboard mirror. Callback requests need delivery status and retry handling. Failed actions must return a response the agent can explain accurately.

@@ -19,6 +19,7 @@ jobs:
       - run: ruff format --check .
       - run: pytest
       - run: python scripts/demo_workflow.py
+      - run: python scripts/benchmark_local.py --samples 10 --workers 4
   docker:
     runs-on: ubuntu-latest
     steps:

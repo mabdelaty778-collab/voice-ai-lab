@@ -13,4 +13,6 @@ build/
 dist/
 console-recordings/
 *.log
+session-measurements/
+*outcomes*.csv
 .DS_Store

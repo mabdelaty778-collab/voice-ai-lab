@@ -1,0 +1,43 @@
+{
+  "scope": "local in-process ASGI/SQLite benchmark; no audio or production traffic",
+  "recorded_at": "2026-11-05T00:34:29.398639+00:00",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "warmup_lookup_requests_excluded": 10,
+  "sequential_latency": {
+    "lookup": {
+      "n": 100,
+      "p50_ms": 11.414,
+      "p90_ms": 16.812,
+      "p95_ms": 17.52
+    },
+    "committed_save": {
+      "n": 100,
+      "p50_ms": 10.602,
+      "p90_ms": 16.05,
+      "p95_ms": 16.839
+    },
+    "idempotent_replay": {
+      "n": 100,
+      "p50_ms": 7.679,
+      "p90_ms": 10.766,
+      "p95_ms": 11.895
+    }
+  },
+  "concurrency": {
+    "workers": 8,
+    "same_request_retries": 32,
+    "batch_elapsed_ms": 285.753
+  },
+  "checks": {
+    "sequential_expected_results": 300,
+    "concurrent_retries_one_committed_record": 32,
+    "injected_failure_no_false_success": true,
+    "restart_durability_and_recovery": true
+  },
+  "provider_calls": 0,
+  "provider_usage_cost_usd": 0,
+  "host_cost_usd": null,
+  "temporary_database_removed": true,
+  "result": "passed"
+}

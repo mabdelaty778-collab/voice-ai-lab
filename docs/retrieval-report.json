@@ -1,0 +1,1885 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T02:35:05.259050+00:00",
+  "scope": "Synthetic authored regression set, not held out. Keyword retrieval only; no LLM, embeddings, speech, real CRM, or production performance measured.",
+  "method": "normalized-keyword-overlap-v1",
+  "sha256": {
+    "fixtures": "2a942a4316bec78d85d5f9cf0a7ee05aef15608faa13b287ffcf933c039c3ffa",
+    "corpus": "2b1fdd9cf6aaa3e47b7d8d53f2e418af28be59daccd1142a4ed283db65cc9ddf",
+    "retrieval_code": "40c018a2900e98afe2bf05cd8c31e7d0b5763171d2921223f128ecd5a7b77123"
+  },
+  "summary": {
+    "all": {
+      "baseline": {
+        "cases": 60,
+        "answerable": 52,
+        "unanswerable": 8,
+        "hit_at_1_count": 34,
+        "hit_at_3_count": 34,
+        "hit_at_1": 0.6538,
+        "mrr_at_3": 0.6538,
+        "correct_abstentions": 6,
+        "abstention_accuracy": 0.75,
+        "passed": 40
+      },
+      "candidate": {
+        "cases": 60,
+        "answerable": 52,
+        "unanswerable": 8,
+        "hit_at_1_count": 48,
+        "hit_at_3_count": 48,
+        "hit_at_1": 0.9231,
+        "mrr_at_3": 0.9231,
+        "correct_abstentions": 6,
+        "abstention_accuracy": 0.75,
+        "passed": 54
+      }
+    },
+    "en": {
+      "baseline": {
+        "cases": 30,
+        "answerable": 26,
+        "unanswerable": 4,
+        "hit_at_1_count": 24,
+        "hit_at_3_count": 24,
+        "hit_at_1": 0.9231,
+        "mrr_at_3": 0.9231,
+        "correct_abstentions": 3,
+        "abstention_accuracy": 0.75,
+        "passed": 27
+      },
+      "candidate": {
+        "cases": 30,
+        "answerable": 26,
+        "unanswerable": 4,
+        "hit_at_1_count": 24,
+        "hit_at_3_count": 24,
+        "hit_at_1": 0.9231,
+        "mrr_at_3": 0.9231,
+        "correct_abstentions": 3,
+        "abstention_accuracy": 0.75,
+        "passed": 27
+      }
+    },
+    "ar": {
+      "baseline": {
+        "cases": 30,
+        "answerable": 26,
+        "unanswerable": 4,
+        "hit_at_1_count": 10,
+        "hit_at_3_count": 10,
+        "hit_at_1": 0.3846,
+        "mrr_at_3": 0.3846,
+        "correct_abstentions": 3,
+        "abstention_accuracy": 0.75,
+        "passed": 13
+      },
+      "candidate": {
+        "cases": 30,
+        "answerable": 26,
+        "unanswerable": 4,
+        "hit_at_1_count": 24,
+        "hit_at_3_count": 24,
+        "hit_at_1": 0.9231,
+        "mrr_at_3": 0.9231,
+        "correct_abstentions": 3,
+        "abstention_accuracy": 0.75,
+        "passed": 27
+      }
+    }
+  },
+  "results": [
+    {
+      "id": "q01",
+      "language": "en",
+      "query": "python",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [
+        "python-automation"
+      ],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "python"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "python"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q02",
+      "language": "en",
+      "query": "automation scripts",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [
+        "python-automation"
+      ],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "automation",
+          "scripts"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 2,
+            "matched_terms": [
+              "automation",
+              "scripts"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q03",
+      "language": "en",
+      "query": "Python duration",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [
+        "python-automation"
+      ],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "duration",
+          "python"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "python"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q04",
+      "language": "en",
+      "query": "I want Python automation",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [
+        "python-automation"
+      ],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "automation",
+          "python",
+          "want"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 2,
+            "matched_terms": [
+              "automation",
+              "python"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q05",
+      "language": "ar",
+      "query": "بايثون",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [
+        "python-automation"
+      ],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "بايثون"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "بايثون"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q06",
+      "language": "ar",
+      "query": "اتمتة",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اتمتة"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "اتمتة"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q07",
+      "language": "ar",
+      "query": "أَتْمَتَة",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اتمتة"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "اتمتة"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q08",
+      "language": "ar",
+      "query": "بـايـثـون",
+      "expected": [
+        "python-automation"
+      ],
+      "baseline": [],
+      "candidate": [
+        "python-automation"
+      ],
+      "passed": true,
+      "reply": "Python Automation: 4 weeks; USD 120 (fictional). Prerequisites: Basic Python syntax. Practice file processing, HTTP clients, and scheduled tasks using synthetic data.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "بايثون"
+        ],
+        "hits": [
+          {
+            "source_id": "python-automation",
+            "score": 1,
+            "matched_terms": [
+              "بايثون"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q09",
+      "language": "en",
+      "query": "ai foundations",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [
+        "ai-foundations"
+      ],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "ai",
+          "foundations"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 2,
+            "matched_terms": [
+              "ai",
+              "foundations"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q10",
+      "language": "en",
+      "query": "machine learning",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [
+        "ai-foundations"
+      ],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "learning",
+          "machine"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 2,
+            "matched_terms": [
+              "learning",
+              "machine"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q11",
+      "language": "en",
+      "query": "AI prerequisites",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [
+        "ai-foundations"
+      ],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "ai",
+          "prerequisites"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 1,
+            "matched_terms": [
+              "ai"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q12",
+      "language": "en",
+      "query": "foundations price",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [
+        "ai-foundations"
+      ],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "foundations",
+          "price"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 1,
+            "matched_terms": [
+              "foundations"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q13",
+      "language": "ar",
+      "query": "ذكاء اصطناعي",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [
+        "ai-foundations"
+      ],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اصطناعي",
+          "ذكاء"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 2,
+            "matched_terms": [
+              "اصطناعي",
+              "ذكاء"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q14",
+      "language": "ar",
+      "query": "إصطناعي",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اصطناعي"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 1,
+            "matched_terms": [
+              "اصطناعي"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q15",
+      "language": "ar",
+      "query": "ذَكَاء",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "ذكاء"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 1,
+            "matched_terms": [
+              "ذكاء"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q16",
+      "language": "ar",
+      "query": "اصطناعـي",
+      "expected": [
+        "ai-foundations"
+      ],
+      "baseline": [],
+      "candidate": [
+        "ai-foundations"
+      ],
+      "passed": true,
+      "reply": "AI Foundations: 6 weeks; USD 180 (fictional). Prerequisites: Basic Python and algebra. Learn train/test splits, evaluation, and simple model serving.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اصطناعي"
+        ],
+        "hits": [
+          {
+            "source_id": "ai-foundations",
+            "score": 1,
+            "matched_terms": [
+              "اصطناعي"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q17",
+      "language": "en",
+      "query": "voice agents",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "agents",
+          "voice"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 2,
+            "matched_terms": [
+              "agents",
+              "voice"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q18",
+      "language": "en",
+      "query": "livekit",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "livekit"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "livekit"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q19",
+      "language": "en",
+      "query": "speech course",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "course",
+          "speech"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "speech"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q20",
+      "language": "en",
+      "query": "voice engineering",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "engineering",
+          "voice"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "voice"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q21",
+      "language": "ar",
+      "query": "صوت",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "صوت"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "صوت"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q22",
+      "language": "ar",
+      "query": "صوتي",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [
+        "voice-agents"
+      ],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "صوتي"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "صوتي"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q23",
+      "language": "ar",
+      "query": "صَوْتِي",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "صوتي"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "صوتي"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q24",
+      "language": "ar",
+      "query": "صوتى",
+      "expected": [
+        "voice-agents"
+      ],
+      "baseline": [],
+      "candidate": [
+        "voice-agents"
+      ],
+      "passed": true,
+      "reply": "Voice Agent Engineering: 3 weeks; USD 150 (fictional). Prerequisites: Python functions and async/await. Build grounded tools, persist test leads, and handle provider failures.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "صوتي"
+        ],
+        "hits": [
+          {
+            "source_id": "voice-agents",
+            "score": 1,
+            "matched_terms": [
+              "صوتي"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q25",
+      "language": "en",
+      "query": "online classes",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "classes",
+          "online"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 2,
+            "matched_terms": [
+              "classes",
+              "online"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q26",
+      "language": "en",
+      "query": "where",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "where"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "where"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q27",
+      "language": "en",
+      "query": "delivery",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "delivery"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "delivery"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q28",
+      "language": "en",
+      "query": "location",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "location"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "location"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q29",
+      "language": "ar",
+      "query": "مكان",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "مكان"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "مكان"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q30",
+      "language": "ar",
+      "query": "اونلاين",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اونلاين"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "اونلاين"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q31",
+      "language": "ar",
+      "query": "أُونْلَايْن",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اونلاين"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "اونلاين"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q32",
+      "language": "ar",
+      "query": "أونلاين",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": true,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اونلاين"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "اونلاين"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q33",
+      "language": "en",
+      "query": "pay",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "pay"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "pay"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q34",
+      "language": "en",
+      "query": "payment",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "payment"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "payment"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q35",
+      "language": "en",
+      "query": "installments",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "installments"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "installments"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q36",
+      "language": "en",
+      "query": "Can I pay in installments?",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "installments",
+          "pay"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 2,
+            "matched_terms": [
+              "installments",
+              "pay"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q37",
+      "language": "ar",
+      "query": "دفع",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "دفع"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "دفع"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q38",
+      "language": "ar",
+      "query": "اقساط",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اقساط"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "اقساط"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q39",
+      "language": "ar",
+      "query": "أَقْسَاط",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اقساط"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "اقساط"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q40",
+      "language": "ar",
+      "query": "أقساط",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [
+        "payments"
+      ],
+      "candidate": [
+        "payments"
+      ],
+      "passed": true,
+      "reply": "All prices are sample data. The lab does not accept payments or promise installment plans.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "اقساط"
+        ],
+        "hits": [
+          {
+            "source_id": "payments",
+            "score": 1,
+            "matched_terms": [
+              "اقساط"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q41",
+      "language": "en",
+      "query": "accredited",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "accredited"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "accredited"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q42",
+      "language": "en",
+      "query": "certificate",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "certificate"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "certificate"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q43",
+      "language": "en",
+      "query": "certification",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "certification"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "certification"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q44",
+      "language": "en",
+      "query": "accreditation",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "accreditation"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "accreditation"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q45",
+      "language": "ar",
+      "query": "معتمد",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "معتمد"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "معتمد"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q46",
+      "language": "ar",
+      "query": "شهادة",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [
+        "certificates"
+      ],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "شهادة"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "شهادة"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q47",
+      "language": "ar",
+      "query": "شَهَادَة",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "شهادة"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "شهادة"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q48",
+      "language": "ar",
+      "query": "مُعْتَمَد",
+      "expected": [
+        "certificates"
+      ],
+      "baseline": [],
+      "candidate": [
+        "certificates"
+      ],
+      "passed": true,
+      "reply": "These are fictional courses. No accreditation, license eligibility, or real certificate is offered.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "معتمد"
+        ],
+        "hits": [
+          {
+            "source_id": "certificates",
+            "score": 1,
+            "matched_terms": [
+              "معتمد"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q49",
+      "language": "en",
+      "query": "weather tomorrow",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "tomorrow",
+          "weather"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q50",
+      "language": "ar",
+      "query": "الطقس غدا",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "الطقس",
+          "غدا"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q51",
+      "language": "en",
+      "query": "the and a",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q52",
+      "language": "ar",
+      "query": "من في على",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "علي",
+          "في",
+          "من"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q53",
+      "language": "en",
+      "query": "astronomy scholarships",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "astronomy",
+          "scholarships"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q54",
+      "language": "ar",
+      "query": "منح الفلك",
+      "expected": [],
+      "baseline": [],
+      "candidate": [],
+      "passed": true,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "الفلك",
+          "منح"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q55",
+      "language": "en",
+      "query": "where is the nearest hospital",
+      "expected": [],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": false,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "hospital",
+          "nearest",
+          "where"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "where"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q56",
+      "language": "ar",
+      "query": "مكان المستشفى",
+      "expected": [],
+      "baseline": [
+        "delivery"
+      ],
+      "candidate": [
+        "delivery"
+      ],
+      "passed": false,
+      "reply": "This fictional academy runs online practice sessions. There is no real campus or booking service.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "المستشفي",
+          "مكان"
+        ],
+        "hits": [
+          {
+            "source_id": "delivery",
+            "score": 1,
+            "matched_terms": [
+              "مكان"
+            ]
+          }
+        ],
+        "decision": "return_sources"
+      }
+    },
+    {
+      "id": "q57",
+      "language": "en",
+      "query": "Can I split the fee?",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [],
+      "candidate": [],
+      "passed": false,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "fee",
+          "split"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q58",
+      "language": "ar",
+      "query": "ينفع ادفع على دفعات؟",
+      "expected": [
+        "payments"
+      ],
+      "baseline": [],
+      "candidate": [],
+      "passed": false,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "ادفع",
+          "دفعات",
+          "علي",
+          "ينفع"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q59",
+      "language": "en",
+      "query": "remote lessons",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [],
+      "candidate": [],
+      "passed": false,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "lessons",
+          "remote"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    },
+    {
+      "id": "q60",
+      "language": "ar",
+      "query": "الدراسة عن بعد",
+      "expected": [
+        "delivery"
+      ],
+      "baseline": [],
+      "candidate": [],
+      "passed": false,
+      "reply": "I could not find that in the sample knowledge. Please clarify or ask a human.",
+      "trace": {
+        "method": "normalized-keyword-overlap-v1",
+        "normalized_terms": [
+          "الدراسة",
+          "بعد",
+          "عن"
+        ],
+        "hits": [],
+        "decision": "abstain"
+      }
+    }
+  ]
+}

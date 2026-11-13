@@ -18,6 +18,7 @@ jobs:
       - run: ruff check .
       - run: ruff format --check .
       - run: pytest
+      - run: python -m scripts.evaluate_retrieval
       - run: python scripts/demo_workflow.py
       - run: python scripts/benchmark_local.py --samples 10 --workers 4
   docker:

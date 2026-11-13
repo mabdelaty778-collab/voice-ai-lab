@@ -192,3 +192,9 @@ flowchart TD
 - [Contributing](CONTRIBUTING.md): add a useful lesson or fix with a regression test.
 
 Source inspiration: [my academy project](https://github.com/aicalling-netizen/ebh-academy-ai). This lab is not a copy of that production environment. Third-party dependencies retain their own licenses.
+
+## Bilingual retrieval evaluation
+
+Inspect the [60-case English/Arabic evaluation](docs/retrieval-evaluation.md), including
+normalization gains, six known failures, source traces, and reproduction instructions.
+This is an authored keyword-retrieval regression set, not a production or LLM benchmark.

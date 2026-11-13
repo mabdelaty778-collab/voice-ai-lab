@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "scope": "60 hand-authored synthetic regression cases; 30 English and 30 Arabic. Not held out. Includes known keyword-retrieval failures.",
+  "cases": [
+    {
+      "id": "q01",
+      "language": "en",
+      "query": "python",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q02",
+      "language": "en",
+      "query": "automation scripts",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q03",
+      "language": "en",
+      "query": "Python duration",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q04",
+      "language": "en",
+      "query": "I want Python automation",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q05",
+      "language": "ar",
+      "query": "بايثون",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q06",
+      "language": "ar",
+      "query": "اتمتة",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q07",
+      "language": "ar",
+      "query": "أَتْمَتَة",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q08",
+      "language": "ar",
+      "query": "بـايـثـون",
+      "expected": [
+        "python-automation"
+      ]
+    },
+    {
+      "id": "q09",
+      "language": "en",
+      "query": "ai foundations",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q10",
+      "language": "en",
+      "query": "machine learning",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q11",
+      "language": "en",
+      "query": "AI prerequisites",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q12",
+      "language": "en",
+      "query": "foundations price",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q13",
+      "language": "ar",
+      "query": "ذكاء اصطناعي",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q14",
+      "language": "ar",
+      "query": "إصطناعي",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q15",
+      "language": "ar",
+      "query": "ذَكَاء",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q16",
+      "language": "ar",
+      "query": "اصطناعـي",
+      "expected": [
+        "ai-foundations"
+      ]
+    },
+    {
+      "id": "q17",
+      "language": "en",
+      "query": "voice agents",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q18",
+      "language": "en",
+      "query": "livekit",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q19",
+      "language": "en",
+      "query": "speech course",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q20",
+      "language": "en",
+      "query": "voice engineering",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q21",
+      "language": "ar",
+      "query": "صوت",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q22",
+      "language": "ar",
+      "query": "صوتي",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q23",
+      "language": "ar",
+      "query": "صَوْتِي",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q24",
+      "language": "ar",
+      "query": "صوتى",
+      "expected": [
+        "voice-agents"
+      ]
+    },
+    {
+      "id": "q25",
+      "language": "en",
+      "query": "online classes",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q26",
+      "language": "en",
+      "query": "where",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q27",
+      "language": "en",
+      "query": "delivery",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q28",
+      "language": "en",
+      "query": "location",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q29",
+      "language": "ar",
+      "query": "مكان",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q30",
+      "language": "ar",
+      "query": "اونلاين",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q31",
+      "language": "ar",
+      "query": "أُونْلَايْن",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q32",
+      "language": "ar",
+      "query": "أونلاين",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q33",
+      "language": "en",
+      "query": "pay",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q34",
+      "language": "en",
+      "query": "payment",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q35",
+      "language": "en",
+      "query": "installments",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q36",
+      "language": "en",
+      "query": "Can I pay in installments?",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q37",
+      "language": "ar",
+      "query": "دفع",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q38",
+      "language": "ar",
+      "query": "اقساط",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q39",
+      "language": "ar",
+      "query": "أَقْسَاط",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q40",
+      "language": "ar",
+      "query": "أقساط",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q41",
+      "language": "en",
+      "query": "accredited",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q42",
+      "language": "en",
+      "query": "certificate",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q43",
+      "language": "en",
+      "query": "certification",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q44",
+      "language": "en",
+      "query": "accreditation",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q45",
+      "language": "ar",
+      "query": "معتمد",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q46",
+      "language": "ar",
+      "query": "شهادة",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q47",
+      "language": "ar",
+      "query": "شَهَادَة",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q48",
+      "language": "ar",
+      "query": "مُعْتَمَد",
+      "expected": [
+        "certificates"
+      ]
+    },
+    {
+      "id": "q49",
+      "language": "en",
+      "query": "weather tomorrow",
+      "expected": []
+    },
+    {
+      "id": "q50",
+      "language": "ar",
+      "query": "الطقس غدا",
+      "expected": []
+    },
+    {
+      "id": "q51",
+      "language": "en",
+      "query": "the and a",
+      "expected": []
+    },
+    {
+      "id": "q52",
+      "language": "ar",
+      "query": "من في على",
+      "expected": []
+    },
+    {
+      "id": "q53",
+      "language": "en",
+      "query": "astronomy scholarships",
+      "expected": []
+    },
+    {
+      "id": "q54",
+      "language": "ar",
+      "query": "منح الفلك",
+      "expected": []
+    },
+    {
+      "id": "q55",
+      "language": "en",
+      "query": "where is the nearest hospital",
+      "expected": []
+    },
+    {
+      "id": "q56",
+      "language": "ar",
+      "query": "مكان المستشفى",
+      "expected": []
+    },
+    {
+      "id": "q57",
+      "language": "en",
+      "query": "Can I split the fee?",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q58",
+      "language": "ar",
+      "query": "ينفع ادفع على دفعات؟",
+      "expected": [
+        "payments"
+      ]
+    },
+    {
+      "id": "q59",
+      "language": "en",
+      "query": "remote lessons",
+      "expected": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "q60",
+      "language": "ar",
+      "query": "الدراسة عن بعد",
+      "expected": [
+        "delivery"
+      ]
+    }
+  ]
+}
